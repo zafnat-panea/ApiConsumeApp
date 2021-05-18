@@ -9,7 +9,7 @@ import {map} from 'rxjs/operators';
 export class NewserviceService {
 
   url = 'http://www.omdbapi.com/';
-  apiKey = 'a430cac9'
+  apiKey = ''
 
   constructor(private http: HttpClient) { }
 
