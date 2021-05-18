@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="arrow-back-outline" (click)="volverAtras()"></ion-icon>
+      {{titulo}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{titulo}}</ion-card-title>
+        <div>
+        <ion-card-subtitle>Año: {{year}} Duración: {{Runtime}} </ion-card-subtitle>
+        <ion-card-subtitle>Genero: {{Genre}}</ion-card-subtitle>
+        <ion-card-subtitle>Director: {{Director}} Idioma: {{Language}} País: {{Country}}</ion-card-subtitle>
+        </div>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-img [src]="imagen"></ion-img>
+        <p>{{Plot}}</p>
+      </ion-card-content>
+    </ion-card>
+</ion-content>

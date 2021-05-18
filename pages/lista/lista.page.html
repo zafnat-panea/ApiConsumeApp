@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class="container">
+      <ion-icon name="arrow-back-outline" (click)="volverAtras()"></ion-icon>
+      Lista
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Búsqueda</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-searchbar placeholder="Filtrar por película" [(ngModel)]="movie" (keyup.enter)="navegar(movie)"></ion-searchbar>
+  </div>
+  <ion-title>{{movie}}</ion-title>
+  <ion-list>
+    <ion-item button *ngFor="let item of (results | async)" (click)="info(item.imdbID)">
+      <ion-label text-wrap>
+        {{item.Title}} ({{item.Year}})
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
